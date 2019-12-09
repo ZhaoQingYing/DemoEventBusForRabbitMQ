@@ -11,7 +11,7 @@ namespace QuotationServices.Models
     {
         public Guid OrderId { get; set; }
 
-        public QuotationType OfType { get; set; }
+        public QuotationType TypeOf { get; set; }
 
         /// <summary>
         /// 实际金额

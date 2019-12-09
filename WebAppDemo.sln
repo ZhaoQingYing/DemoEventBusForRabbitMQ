@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoEventBusFramewrok", "De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuotationServices", "QuotationServices\QuotationServices.csproj", "{0BEAAFD3-A836-42C9-8B1B-5B4B9FA89834}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerServices", "CustomerServices\CustomerServices.csproj", "{EB61655F-B672-4379-9252-F7241CFEDDA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0BEAAFD3-A836-42C9-8B1B-5B4B9FA89834}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BEAAFD3-A836-42C9-8B1B-5B4B9FA89834}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BEAAFD3-A836-42C9-8B1B-5B4B9FA89834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB61655F-B672-4379-9252-F7241CFEDDA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB61655F-B672-4379-9252-F7241CFEDDA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB61655F-B672-4379-9252-F7241CFEDDA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB61655F-B672-4379-9252-F7241CFEDDA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

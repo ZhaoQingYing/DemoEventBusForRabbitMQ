@@ -13,5 +13,7 @@ namespace QuotationServices.ViewModels
         public decimal Price { get; set; }
 
         public decimal InitialPrice { get; set; }
+
+        public CustomerInfoVM Customer { get; set; }
     }
 }

@@ -59,7 +59,7 @@ namespace DemoEventBusRabbitMQ
                     //_logger.LogWarning(ex, "Could not publish event: {EventId} after {Timeout}s ({ExceptionMessage})", @event.Id, $"{time.TotalSeconds:n1}", ex.Message);
                 });
 
-            var eventName = @event.GetType().Name;
+            var eventName = nameof(@event);//.GetType().Name;
 
             //_logger.LogTrace("Creating RabbitMQ channel to publish event: {EventId} ({EventName})", @event.Id, eventName);
 

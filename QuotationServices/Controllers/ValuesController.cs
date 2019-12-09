@@ -42,6 +42,12 @@ namespace QuotationServices.Controllers
             //var model = JsonConvert.DeserializeObject<QuotationOrderVM>(value);
             if (model != null)
             {
+
+                if (model.Customer != null) {
+                    var customerModel = model.Customer;
+                    var customerId = Guid.NewGuid();
+                    await _eventBus.PublishAsync(new CustomerCreateEvent(customerId, customerModel.CustomerName,customerModel.CustomerCode,customerModel.CustomerLevel));
+                }
                 await _eventBus.PublishAsync(new QuotationCreateEvent(id,model.Price,model.InitialPrice,model.orderType));
 
                 return new HttpResponseMessage(HttpStatusCode.OK);
