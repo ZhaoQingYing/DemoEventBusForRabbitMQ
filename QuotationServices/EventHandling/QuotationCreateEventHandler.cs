@@ -32,8 +32,8 @@ namespace QuotationServices.EventHandling
             {
                 OrderId = @event.Id,
                 OfferPrice = @event.Price,
-                ActualPrice = @event.RealPrice,
-                TypeOf = @event.AsType,
+                ActualPrice = @event.InitialPrice,
+                OfType = @event.OrderType,
                 CreateDate = @event.Timestamp
             };
 

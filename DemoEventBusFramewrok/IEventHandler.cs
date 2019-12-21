@@ -9,7 +9,6 @@ namespace DemoEventBusFramewrok
 {
     public interface IEventHandler
     {
-        
         bool CanHandle(IEvent @event);
     }
 

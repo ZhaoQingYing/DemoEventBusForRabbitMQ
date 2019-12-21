@@ -16,7 +16,7 @@ namespace CustomerServices.Events
             Timestamp = DateTime.UtcNow;
         }
 
-        public int CustomerLevel { get; set; }
+        public int CustomerLevel { get; }
 
         public string CustomerName { get; }
 

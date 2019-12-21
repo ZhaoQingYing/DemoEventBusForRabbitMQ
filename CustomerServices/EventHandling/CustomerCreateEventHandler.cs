@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 
 namespace CustomerServices.EventHandling
 {
-    public class CustomerCreateEventHandler: IEventHandler<CustomerCreateEvent>
+    public class CustomerCreateEventHandler : IEventHandler<CustomerCreateEvent>
     {
 
         private readonly ICustomerRepository _customerRepository;
 
-        public CustomerCreateEventHandler(ICustomerRepository customerRepository) {
+        public CustomerCreateEventHandler(ICustomerRepository customerRepository)
+        {
             _customerRepository = customerRepository;
         }
 
         private Task<bool> ExecutionAsync(CustomerCreateEvent @event)
-        { 
-            var customer = new CustomerInfo() {
+        {
+            var customer = new CustomerInfo()
+            {
                 Id = @event.Id,
                 CustomerCode = @event.CustomerCode,
                 CustomerName = @event.CustomerName,
-                CreateDate=@event.Timestamp
+                CustomerLevel = @event.CustomerLevel,
+                CreateDate = @event.Timestamp
             };
 
             _customerRepository.AddCustomerAsync(customer);

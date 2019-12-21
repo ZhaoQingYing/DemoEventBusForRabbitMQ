@@ -48,7 +48,7 @@ namespace QuotationServices.Controllers
                     var customerId = Guid.NewGuid();
                     await _eventBus.PublishAsync(new CustomerCreateEvent(customerId, customerModel.CustomerName,customerModel.CustomerCode,customerModel.CustomerLevel));
                 }
-                await _eventBus.PublishAsync(new QuotationCreateEvent(id,model.Price,model.InitialPrice,model.orderType));
+                await _eventBus.PublishAsync(new QuotationCreateEvent(id,model.Price,model.InitialPrice,model.OrderType));
 
                 return new HttpResponseMessage(HttpStatusCode.OK);
             }

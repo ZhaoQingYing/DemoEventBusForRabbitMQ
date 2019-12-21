@@ -8,7 +8,7 @@ namespace QuotationServices.ViewModels
 {
     public class QuotationOrderVM
     {
-        public QuotationType orderType{ get; set; }
+        public QuotationType OrderType { get; set; }
 
         public decimal Price { get; set; }
 

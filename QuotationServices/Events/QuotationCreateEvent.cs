@@ -9,22 +9,22 @@ namespace QuotationServices.Events
 {
     public class QuotationCreateEvent : IEvent
     {
-        public QuotationCreateEvent(Guid id, decimal price, decimal realPrice, QuotationType toType)
+        public QuotationCreateEvent(Guid id, decimal price, decimal initialPrice, QuotationType orderType)
         {
             Id = id;
             Price = price;
-            RealPrice = realPrice;
-            AsType = toType;
+            InitialPrice = initialPrice;
+            OrderType = orderType;
             Timestamp = DateTime.Now;
         }
 
-        public QuotationType AsType { get; }
+        public QuotationType OrderType { get; }
 
         public Guid Id { get; }
 
         public decimal Price { get; }
 
-        public decimal RealPrice { get; }
+        public decimal InitialPrice { get; }
 
         public DateTime Timestamp { get; }
     }
